@@ -90,7 +90,7 @@
 <meta property="og:image" content="http://yoursite.com/2018/06/14/js代码测试小技巧/02.jpg">
 <meta property="og:image" content="http://yoursite.com/2018/06/14/js代码测试小技巧/03.jpg">
 <meta property="og:image" content="http://yoursite.com/2018/06/14/js代码测试小技巧/04.jpg">
-<meta property="og:image" content="http://yoursite.com/2018/06/14/js代码测试小技巧/05.jpg">
+<meta property="og:image" content="https://github.com/zhangbaishun1996/baishun.github.io/blob/master/2018/06/14/js%E4%BB%A3%E7%A0%81%E6%B5%8B%E8%AF%95%E5%B0%8F%E6%8A%80%E5%B7%A7/02.jpg">
 <meta property="og:image" content="http://yoursite.com/2018/06/14/js代码测试小技巧/06.jpg">
 <meta property="og:image" content="http://yoursite.com/2018/06/14/js代码测试小技巧/07.jpg">
 <meta property="og:image" content="http://yoursite.com/2018/06/14/js代码测试小技巧/08.jpg">
@@ -99,7 +99,7 @@
 <meta property="og:image" content="http://yoursite.com/2018/06/14/js代码测试小技巧/012.jpg">
 <meta property="og:image" content="http://yoursite.com/2018/06/14/js代码测试小技巧/013.jpg">
 <meta property="og:image" content="http://yoursite.com/2018/06/14/js代码测试小技巧/014.jpg">
-<meta property="og:updated_time" content="2018-06-14T06:32:44.790Z">
+<meta property="og:updated_time" content="2018-06-14T06:47:11.675Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="js代码调试小技巧">
 <meta name="twitter:description" content="1. debugger;除了console.log之外，还有debugger调试;一旦在代码中加入了这行语句，Chrome在执行的时候会自动在该行停下来。你甚至可以和条件语句配合使用，仅仅在你需要它的时候开启。 if(thisThing){   debugger;} 2.console.table 将对象以表格的形式展示有时候，你需要查看一个复杂的对象元素。通常，我们都会使用console.log">
@@ -400,7 +400,7 @@
 <p>console.time(‘Timer1’);</p>
 <p>var items = [];</p>
 <p>for(var i = 0; i &lt; 100000; i++){<br>  items.push({index: i});<br>}</p>
-<p>console.timeEnd(‘Timer1’);<br><img src="/2018/06/14/js代码测试小技巧/05.jpg" alt="图例"></p>
+<p>console.timeEnd(‘Timer1’);<br><img src="https://github.com/zhangbaishun1996/baishun.github.io/blob/master/2018/06/14/js%E4%BB%A3%E7%A0%81%E6%B5%8B%E8%AF%95%E5%B0%8F%E6%8A%80%E5%B7%A7/02.jpg" alt="图例"></p>
 <h2 id="6-获取某个函数的Stacktrace"><a href="#6-获取某个函数的Stacktrace" class="headerlink" title="6. 获取某个函数的Stacktrace"></a>6. 获取某个函数的Stacktrace</h2><p>你也许知道不少JavaScript框架，它们可以一键快速生成大量代码。代码里面包含各种view和事件触发器，最终你会想要搞明白某些函数是如何被调用的。<br>因为JavaScript并不是一个很结构化的语言，所有有时候要搞清楚何时如何发生的还是比较困难的。在这个时候，我们可以使用console.trace来debug JavaScript。<br>比如，如果你想看到一个Car实例下，funcZ的整个堆栈详情:</p>
 <p>var car;</p>
 <p>var func1 = function() {<br> func2();<br>}</p>
