@@ -1087,7 +1087,8 @@ pre .javascript .function {
   }
 }
 .back-to-top.back-to-top-on {
-  bottom: 30px;
+  bottom: 80px;
+  right: 35px;
 }
 .header {
   background: transparent;
@@ -1945,7 +1946,7 @@ img:hover {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #f7b;
+  background: #ffa836;
 }
 .links-of-blogroll {
   font-size: 13px;
