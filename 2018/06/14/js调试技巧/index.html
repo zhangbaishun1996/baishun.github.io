@@ -1,0 +1,928 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/baishun.github.io/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/baishun.github.io/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/baishun.github.io/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/baishun.github.io/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/baishun.github.io/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/baishun.github.io/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/baishun.github.io/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="js," />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="1. debugger;除了console.log之外，还有debugger调试;一旦在代码中加入了这行语句，Chrome在执行的时候会自动在该行停下来。你甚至可以和条件语句配合使用，仅仅在你需要它的时候开启。 if(thisThing){   debugger;} 2.console.table 将对象以表格的形式展示有时候，你需要查看一个复杂的对象元素。通常，我们都会使用console.log">
+<meta name="keywords" content="js">
+<meta property="og:type" content="article">
+<meta property="og:title" content="js调试技巧">
+<meta property="og:url" content="http://yoursite.com/2018/06/14/js调试技巧/index.html">
+<meta property="og:site_name" content="BaiShun">
+<meta property="og:description" content="1. debugger;除了console.log之外，还有debugger调试;一旦在代码中加入了这行语句，Chrome在执行的时候会自动在该行停下来。你甚至可以和条件语句配合使用，仅仅在你需要它的时候开启。 if(thisThing){   debugger;} 2.console.table 将对象以表格的形式展示有时候，你需要查看一个复杂的对象元素。通常，我们都会使用console.log">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://yoursite.com/baishun.github.io/2018/06/14/js调试技巧/02.jpg">
+<meta property="og:image" content="http://yoursite.com/baishun.github.io/2018/06/14/js调试技巧/03.jpg">
+<meta property="og:image" content="http://yoursite.com/baishun.github.io/2018/06/14/js调试技巧/04.jpg">
+<meta property="og:image" content="http://yoursite.com/baishun.github.io/2018/06/14/js调试技巧/05.jpg">
+<meta property="og:image" content="http://yoursite.com/baishun.github.io/2018/06/14/js调试技巧/06.jpg">
+<meta property="og:image" content="http://yoursite.com/baishun.github.io/2018/06/14/js调试技巧/07.jpg">
+<meta property="og:image" content="http://yoursite.com/baishun.github.io/2018/06/14/js调试技巧/08.jpg">
+<meta property="og:image" content="http://yoursite.com/baishun.github.io/2018/06/14/js调试技巧/010.jpg">
+<meta property="og:image" content="http://yoursite.com/baishun.github.io/2018/06/14/js调试技巧/011.jpg">
+<meta property="og:image" content="http://yoursite.com/baishun.github.io/2018/06/14/js调试技巧/012.jpg">
+<meta property="og:image" content="http://yoursite.com/baishun.github.io/2018/06/14/js调试技巧/013.jpg">
+<meta property="og:image" content="http://yoursite.com/baishun.github.io/2018/06/14/js调试技巧/014.jpg">
+<meta property="og:updated_time" content="2018-06-14T07:28:38.469Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="js调试技巧">
+<meta name="twitter:description" content="1. debugger;除了console.log之外，还有debugger调试;一旦在代码中加入了这行语句，Chrome在执行的时候会自动在该行停下来。你甚至可以和条件语句配合使用，仅仅在你需要它的时候开启。 if(thisThing){   debugger;} 2.console.table 将对象以表格的形式展示有时候，你需要查看一个复杂的对象元素。通常，我们都会使用console.log">
+<meta name="twitter:image" content="http://yoursite.com/baishun.github.io/2018/06/14/js调试技巧/02.jpg">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/baishun.github.io/',
+    scheme: 'Pisces',
+    version: '5.1.4',
+    sidebar: {"position":"right","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2018/06/14/js调试技巧/"/>
+
+
+
+
+
+  <script>
+  (function(i,s,o,g,r,a,m){i["DaoVoiceObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;a.charset="utf-8";m.parentNode.insertBefore(a,m)})(window,document,"script",('https:' == document.location.protocol ? 'https:' : 'http:') + "//widget.daovoice.io/widget/0f81ff2f.js","daovoice")
+  daovoice('init', {
+      app_id: "fc21e0c6"
+    });
+  daovoice('update');
+  </script>
+
+  <title>js调试技巧 | BaiShun</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-right page-post-detail">
+    <div class="headband"></div>
+      <a href="https://github.com/zhangbaishun1996"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_gray_6d6d6d.png" alt="Fork me on GitHub"></a>
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/baishun.github.io/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">BaiShun</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/baishun.github.io/" rel="section">
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/baishun.github.io/archives" rel="section">
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/baishun.github.io/categories" rel="section">
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/baishun.github.io/about" rel="section">
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/baishun.github.io/tags" rel="section">
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/baishun.github.io/2018/06/14/js调试技巧/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="John Doe">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/baishun.github.io/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="BaiShun">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">js调试技巧</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-06-14T10:53:20+08:00">
+                2018-06-14
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/baishun.github.io/categories/js/" itemprop="url" rel="index">
+                    <span itemprop="name">js</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="page-pv"><i class="fa fa-file-o"></i> 浏览
+            <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>次
+            </span>
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  1,985
+                </span>
+              
+
+              
+
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="1-debugger"><a href="#1-debugger" class="headerlink" title="1. debugger;"></a>1. debugger;</h2><p>除了console.log之外，还有debugger调试;一旦在代码中加入了这行语句，Chrome在执行的时候会自动在该行停下来。你甚至可以和条件语句配合使用，仅仅在你需要它的时候开启。</p>
+<p>if(thisThing){</p>
+<p>  debugger;<br>}</p>
+<h2 id="2-console-table-将对象以表格的形式展示"><a href="#2-console-table-将对象以表格的形式展示" class="headerlink" title="2.console.table 将对象以表格的形式展示"></a>2.console.table 将对象以表格的形式展示</h2><p>有时候，你需要查看一个复杂的对象元素。通常，我们都会使用console.log将其打印出来然后查看。其实，你还可以使用console.table，让对象更加美观地呈现出来。</p>
+<p>var animals = [</p>
+<p>   { animal: ‘Horse’, name: ‘Henry’, age: 43 },<br>   { animal: ‘Dog’, name: ‘Fred’, age: 13 },<br>   { animal: ‘Cat’, name: ‘Frodo’, age: 18 }<br>];</p>
+<p>console.table(animals);<br>输出样式：<br><img src="/baishun.github.io/2018/06/14/js调试技巧/02.jpg" alt="图例"></p>
+<h2 id="3-尝试适配各种机型屏幕大小"><a href="#3-尝试适配各种机型屏幕大小" class="headerlink" title="3. 尝试适配各种机型屏幕大小"></a>3. 尝试适配各种机型屏幕大小</h2><p>如果你拥有各种型号的手机那么测试会相对简单，但是现实可不会这样。其实，你可以直接在浏览器你们改变viewport的大小来查看效果。谷歌浏览器提供了非常强大的功能。在谷歌开发者面板，点击toogle device mode按钮，就可以选择不同的设备大小了。<br><img src="/baishun.github.io/2018/06/14/js调试技巧/03.jpg" alt="图例"></p>
+<h2 id="4-如何快速找到对应的DOM元素"><a href="#4-如何快速找到对应的DOM元素" class="headerlink" title="4. 如何快速找到对应的DOM元素"></a>4. 如何快速找到对应的DOM元素</h2><p>构造一个DOM元素，然后在控制台(Console)下面使用。谷歌浏览器调试器(Chrome Inspector)保留了最后5个DOM元素的历史。最后一个标记为$0,倒数第二个$1, 以此类推。<br>如果你按照item-4，item-3，item-2，item-1，item-0的顺序点击这些元素，那么你可以在控制台下使用$x来访问它们。<br><img src="/baishun.github.io/2018/06/14/js调试技巧/04.jpg" alt="图例"></p>
+<h2 id="5-使用console-time-和console-timeEnd-来记录时间"><a href="#5-使用console-time-和console-timeEnd-来记录时间" class="headerlink" title="5. 使用console.time()和console.timeEnd()来记录时间"></a>5. 使用console.time()和console.timeEnd()来记录时间</h2><p>了解代码的执行时间是非常有用的，特别是调试耗时的for循环。你可以通过定义不同的名字来设置多个timer。我们来演示一下如何操作：</p>
+<p>console.time(‘Timer1’);</p>
+<p>var items = [];</p>
+<p>for(var i = 0; i &lt; 100000; i++){<br>  items.push({index: i});<br>}</p>
+<p>console.timeEnd(‘Timer1’);<br><img src="/baishun.github.io/2018/06/14/js调试技巧/05.jpg" alt="图例"></p>
+<h2 id="6-获取某个函数的Stacktrace"><a href="#6-获取某个函数的Stacktrace" class="headerlink" title="6. 获取某个函数的Stacktrace"></a>6. 获取某个函数的Stacktrace</h2><p>你也许知道不少JavaScript框架，它们可以一键快速生成大量代码。代码里面包含各种view和事件触发器，最终你会想要搞明白某些函数是如何被调用的。<br>因为JavaScript并不是一个很结构化的语言，所有有时候要搞清楚何时如何发生的还是比较困难的。在这个时候，我们可以使用console.trace来debug JavaScript。<br>比如，如果你想看到一个Car实例下，funcZ的整个堆栈详情:</p>
+<p>var car;</p>
+<p>var func1 = function() {<br> func2();<br>}</p>
+<p>var func2 = function() {<br> func4();<br>}<br>var func3 = function() {<br>}</p>
+<p>var func4 = function() {<br> car = new Car();<br> car.funcX();<br>}<br>var Car = function() {<br> this.brand = ‘volvo’;<br> this.color = ‘red’;<br> this.funcX = function() {<br>   this.funcY();<br> }</p>
+<p> this.funcY = function() {<br>   this.funcZ();<br> }</p>
+<p> this.funcZ = function() {<br>   console.trace(‘trace car’)<br> }<br>}<br>func1();<br>var car;<br>var func1 = function() {<br> func2();<br>}<br>var func2 = function() {<br> func4();<br>}<br>var func3 = function() {<br>}<br>var func4 = function() {<br> car = new Car();<br> car.funcX();<br>}<br>var Car = function() {<br> this.brand = ‘volvo’;<br> this.color = ‘red’;<br> this.funcX = function() {<br>   this.funcY();<br> }<br> this.funcY = function() {<br>   this.funcZ();<br> }<br> this.funcZ = function() {<br>   console.trace(‘trace car’)<br> }<br>}<br>func1();<br>使用console.trace，输出结果如下：<br><img src="/baishun.github.io/2018/06/14/js调试技巧/06.jpg" alt="图例"></p>
+<p>我们可以清晰地看到func1调用func2，func2调用func4，func4创建了一个Car的实例，然后调用了car.funcX，等等。<br>有时候，尽管你认为对自己的代码非常清楚，使用console.trace依然可以帮你快速定位函数。比如，你想要改进代码，那么通过trace可以获取到所有相关的函数，而且每一个都可以点击直接跳转，就像一个快捷菜单一样。<br>广告： 如果你需要监控线上JavaScript代码的错误的话，欢迎免费使用Fundebug!</p>
+<h2 id="7-将minify的代码还原"><a href="#7-将minify的代码还原" class="headerlink" title="7. 将minify的代码还原"></a>7. 将minify的代码还原</h2><p>有时候，生产环境的代码出现问题，然而source map并没有和压缩的代码绑定在一起，所有无法看到还原的代码。不用担心，谷歌浏览器可以将JavaScript代码还原到一个可读的样式。尽管还是比不上真实的代码，但是可以很好的帮助你去分析问题了。点击{}来结构化代码：<br><img src="/baishun.github.io/2018/06/14/js调试技巧/07.jpg" alt="图例"></p>
+<h2 id="8-快速定位需要Debug的函数"><a href="#8-快速定位需要Debug的函数" class="headerlink" title="8. 快速定位需要Debug的函数"></a>8. 快速定位需要Debug的函数</h2><p>设想我们想要在函数中设置一个断点，最常见的两种方式是：</p>
+<pre><code>在检查器中找到这一行代码，然后设置断点；
+在代码中添加debugger
+</code></pre><p>无论哪种方法，你都需要在所有的代码文件中首先找到需要debug的那一行。<br>还有一个不常用的方式是使用控制台(console)，使用debug(funcName)，脚本会在那行函数处暂停。使用这个方法可以很快定位函数，但是对于私有和匿名函数不适用。(注意：debug和console.debug不是同一个事情！)</p>
+<p>var func1 = function() {</p>
+<p> func2();<br>};</p>
+<p>var Car = function() {<br> this.funcX = function() {<br>   this.funcY();<br> }</p>
+<p> this.funcY = function() {<br>   this.funcZ();<br> }<br>}</p>
+<p>var car = new Car();<br>在控制台输入debug(car.funcY)，脚本会在函数调用car.funcY处进入debug模式。<br><img src="/baishun.github.io/2018/06/14/js调试技巧/08.jpg" alt="图例"></p>
+<h2 id="9-屏蔽不相关脚本"><a href="#9-屏蔽不相关脚本" class="headerlink" title="9. 屏蔽不相关脚本"></a>9. 屏蔽不相关脚本</h2><p>我们的代码中都会引入不少库函数和框架。大多数都是经过测试，几乎没有什么bug的。但是debugger会一不小心跳进去。因此，我们可以选择将这些脚本屏蔽。可以查看谷歌浏览器屏蔽文件的设置和火狐浏览器屏蔽文件的设置。</p>
+<h2 id="10-个性化console-log信息"><a href="#10-个性化console-log信息" class="headerlink" title="10. 个性化console.log信息"></a>10. 个性化console.log信息</h2><p>在一些很复杂的Debug中，我们需要输出很多行的日志，使用Console.log，console.debug，console.warn，console.info和console.error。你可以使用过滤器来查看特定的消息，但是有时候你会发现这样并不够。我们可以使用更加富有创造力的方法，使用CSS来个性化定义Console.log打印的消息：</p>
+<p>console.todo = function(msg) {</p>
+<p> console.log(‘ % c % s % s % s‘, ‘color: yellow; background - color: black;’, ‘–‘, msg, ‘–‘);<br>}</p>
+<p>console.important = function(msg) {<br> console.log(‘ % c % s % s % s’, ‘color: brown; font - weight: bold; text - decoration: underline;’, ‘–‘, msg, ‘–‘);<br>}</p>
+<p>console.todo(“This is something that’ s need to be fixed”);<br>console.important(‘This is an important message’);<br>输出的结果如下：<br><img src="/baishun.github.io/2018/06/14/js调试技巧/010.jpg" alt="图例"></p>
+<p>你可以用%s来输出字符串，%i来输出数字，%c来自定义格式。如果你使用单页面框架，对于视图(view)的console消息使用一种格式，模型(model)、集合，控制器各自使用不同的格式。甚至，你可能想要更短的名字，类似于wlog, clog和mlog。</p>
+<h2 id="11-查看某个函数调用和其参数值"><a href="#11-查看某个函数调用和其参数值" class="headerlink" title="11. 查看某个函数调用和其参数值"></a>11. 查看某个函数调用和其参数值</h2><p>在谷歌浏览器控制台，你可以一直观察某个函数。每次它被调用，都会打印传入的参数值。</p>
+<p>var func1 = function(x, y, z) {</p>
+<p>//….<br>};<br><img src="/baishun.github.io/2018/06/14/js调试技巧/011.jpg" alt="图例"></p>
+<p>使用monitor函数可以获取到函数运行时传入的参数值。但是，有一个不足在于并没有指明该函数的形参个数。所以func1实际上是需要三个参数的，但是只传入了两个。如果忽略了这种情况，那么可能会导致bug出现。</p>
+<h2 id="12-在控制台快速访问元素"><a href="#12-在控制台快速访问元素" class="headerlink" title="12 在控制台快速访问元素"></a>12 在控制台快速访问元素</h2><p>在控制台使用查询选择器(querySelector)很方便, 使用$(‘css-selector’)就可以返回第一个匹配的元素，$$(‘css-selector’)会返回所有匹配的元素。如果你会多次使用某个元素，甚至可以将其保存到变量中。<br><img src="/baishun.github.io/2018/06/14/js调试技巧/012.jpg" alt="图例"></p>
+<h2 id="13-Postman很好-但是Firefox更快"><a href="#13-Postman很好-但是Firefox更快" class="headerlink" title="13 Postman很好(但是Firefox更快)"></a>13 Postman很好(但是Firefox更快)</h2><p>很多开发者使用Postman来发送Ajax请求。Postman非常好用，但是打开一个新的窗口，并且配置请求对象还是有点繁琐。<br>如果你不需要担心使用cookie认证，那么你可以在Firefox中编辑和重发请求。<br>打开检查器，跳转到网络(network)标签。右键点击选中的请求，选择编辑和重发选项。<br>下图是我将同一个GET请求的属性编辑后再次发送出去的情况：<br><img src="/baishun.github.io/2018/06/14/js调试技巧/013.jpg" alt="图例"></p>
+<h2 id="14-监控节点元素变化并中断"><a href="#14-监控节点元素变化并中断" class="headerlink" title="14 监控节点元素变化并中断"></a>14 监控节点元素变化并中断</h2><p>有时候DOM莫名其妙变化了，然而你并不知道为啥。好在谷歌浏览器提供了一个功能可以在DOM元素变化的时候暂停执行。在谷歌检查器下，右键选中的元素，然后选定要监控的变化类型：Subtree Modifications, Attributes Modifications, Node Removal。</p>
+<p><img src="/baishun.github.io/2018/06/14/js调试技巧/014.jpg" alt="图例"></p>
+
+      
+    </div>
+    
+    
+    
+
+    
+	<div>
+  
+    ﻿<div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">-------------本文结束<i class="fa fa-paw"></i>感谢您的阅读-------------</div>
+    
+</div>
+  
+</div>
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/baishun.github.io/tags/js/" rel="tag"># js</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/baishun.github.io/2018/06/12/愉快的一天/" rel="next" title="愉快的一天">
+                <i class="fa fa-chevron-left"></i> 愉快的一天
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+<div class="post-spread">
+      
+        
+  <div class="bdsharebuttonbox">
+    <a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+    <a href="#" class="bds_douban" data-cmd="douban" title="分享到豆瓣网"></a>
+    <a href="#" class="bds_sqq" data-cmd="sqq" title="分享到QQ好友"></a>
+    <a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a>
+    <a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+    <a href="#" class="bds_tieba" data-cmd="tieba" title="分享到百度贴吧"></a>
+    <a href="#" class="bds_twi" data-cmd="twi" title="分享到Twitter"></a>
+    <a href="#" class="bds_fbook" data-cmd="fbook" title="分享到Facebook"></a>
+    <a href="#" class="bds_more" data-cmd="more"></a>
+    <a class="bds_count" data-cmd="count"></a>
+  </div>
+  <script>
+    window._bd_share_config = {
+      "common": {
+        "bdText": "",
+        "bdMini": "2",
+        "bdMiniList": false,
+        "bdPic": ""
+      },
+      "share": {
+        "bdSize": "16",
+        "bdStyle": "0"
+      },
+      "image": {
+        "viewList": ["tsina", "douban", "sqq", "qzone", "weixin", "twi", "fbook"],
+        "viewText": "分享到：",
+        "viewSize": "16"
+      }
+    }
+  </script>
+
+<script>
+  with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='//bdimg.share.baidu.com/static/api/js/share.js?cdnversion='+~(-new Date()/36e5)];
+</script>
+
+      
+    </div>
+
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+    <div class="comments" id="comments">
+      <div id="lv-container" data-id="city" data-uid="MTAyMC8zNzMwNy8xMzg0MQ"></div>
+    </div>
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/baishun.github.io/images/avatar.jpg"
+                alt="John Doe" />
+            
+              <p class="site-author-name" itemprop="name">John Doe</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/baishun.github.io/archives">
+              
+                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/baishun.github.io/categories/index.html">
+                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/baishun.github.io/tags/index.html">
+                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-debugger"><span class="nav-number">1.</span> <span class="nav-text">1. debugger;</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-console-table-将对象以表格的形式展示"><span class="nav-number">2.</span> <span class="nav-text">2.console.table 将对象以表格的形式展示</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-尝试适配各种机型屏幕大小"><span class="nav-number">3.</span> <span class="nav-text">3. 尝试适配各种机型屏幕大小</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-如何快速找到对应的DOM元素"><span class="nav-number">4.</span> <span class="nav-text">4. 如何快速找到对应的DOM元素</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-使用console-time-和console-timeEnd-来记录时间"><span class="nav-number">5.</span> <span class="nav-text">5. 使用console.time()和console.timeEnd()来记录时间</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-获取某个函数的Stacktrace"><span class="nav-number">6.</span> <span class="nav-text">6. 获取某个函数的Stacktrace</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#7-将minify的代码还原"><span class="nav-number">7.</span> <span class="nav-text">7. 将minify的代码还原</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#8-快速定位需要Debug的函数"><span class="nav-number">8.</span> <span class="nav-text">8. 快速定位需要Debug的函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#9-屏蔽不相关脚本"><span class="nav-number">9.</span> <span class="nav-text">9. 屏蔽不相关脚本</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#10-个性化console-log信息"><span class="nav-number">10.</span> <span class="nav-text">10. 个性化console.log信息</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#11-查看某个函数调用和其参数值"><span class="nav-number">11.</span> <span class="nav-text">11. 查看某个函数调用和其参数值</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#12-在控制台快速访问元素"><span class="nav-number">12.</span> <span class="nav-text">12 在控制台快速访问元素</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#13-Postman很好-但是Firefox更快"><span class="nav-number">13.</span> <span class="nav-text">13 Postman很好(但是Firefox更快)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#14-监控节点元素变化并中断"><span class="nav-number">14.</span> <span class="nav-text">14 监控节点元素变化并中断</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        ﻿<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">John Doe</span>
+
+  
+</div>
+
+
+<!--
+  <div class="powered-by">由  强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; 
+ v5.1.4</div>
+
+-->
+
+<div class="powered-by">
+<i class="fa fa-user-md"></i><span id="busuanzi_container_site_uv">
+  本站访客数:<span id="busuanzi_value_site_uv"></span>
+</span>
+</div>
+<div class="theme-info">
+  <div class="powered-by"></div>
+  <span class="post-count">博客全站共2.0k字</span>
+</div>
+        
+<div class="busuanzi-count">
+  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv">
+      <i class="fa fa-user"></i> 访问人数
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+      
+    </span>
+  
+
+  
+    <span class="site-pv">
+      <i class="fa fa-eye"></i> 总访问量
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+      次
+    </span>
+  
+</div>
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/baishun.github.io/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/baishun.github.io/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/baishun.github.io/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/baishun.github.io/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/baishun.github.io/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/baishun.github.io/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/baishun.github.io/lib/canvas-nest/canvas-nest.min.js"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/baishun.github.io/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/baishun.github.io/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/baishun.github.io/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/baishun.github.io/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/baishun.github.io/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/baishun.github.io/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/baishun.github.io/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+    <script type="text/javascript">
+      (function(d, s) {
+        var j, e = d.getElementsByTagName(s)[0];
+        if (typeof LivereTower === 'function') { return; }
+        j = d.createElement(s);
+        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+        j.async = true;
+        e.parentNode.insertBefore(j, e);
+      })(document, 'script');
+    </script>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+
+<script type="text/javascript"
+color="160,238,225" opacity='0.7' zIndex="-2" count="99" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js"></script>
+
+</body>
+</html>
