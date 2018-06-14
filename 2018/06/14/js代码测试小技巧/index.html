@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="BaiShun">
 <meta property="og:description" content="1. debugger;除了console.log之外，还有debugger调试;一旦在代码中加入了这行语句，Chrome在执行的时候会自动在该行停下来。你甚至可以和条件语句配合使用，仅仅在你需要它的时候开启。 if(thisThing){   debugger;} 2.console.table 将对象以表格的形式展示有时候，你需要查看一个复杂的对象元素。通常，我们都会使用console.log">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://yoursite.com/2018/06/14/js代码测试小技巧/02.jpg">
+<meta property="og:image" content="https://github.com/zhangbaishun1996/baishun.github.io/blob/master/2018/06/14/js%E4%BB%A3%E7%A0%81%E6%B5%8B%E8%AF%95%E5%B0%8F%E6%8A%80%E5%B7%A7/02.jpg">
 <meta property="og:image" content="http://yoursite.com/2018/06/14/js代码测试小技巧/03.jpg">
 <meta property="og:image" content="http://yoursite.com/2018/06/14/js代码测试小技巧/04.jpg">
 <meta property="og:image" content="https://github.com/zhangbaishun1996/baishun.github.io/blob/master/2018/06/14/js%E4%BB%A3%E7%A0%81%E6%B5%8B%E8%AF%95%E5%B0%8F%E6%8A%80%E5%B7%A7/02.jpg">
@@ -99,11 +99,11 @@
 <meta property="og:image" content="http://yoursite.com/2018/06/14/js代码测试小技巧/012.jpg">
 <meta property="og:image" content="http://yoursite.com/2018/06/14/js代码测试小技巧/013.jpg">
 <meta property="og:image" content="http://yoursite.com/2018/06/14/js代码测试小技巧/014.jpg">
-<meta property="og:updated_time" content="2018-06-14T06:47:11.675Z">
+<meta property="og:updated_time" content="2018-06-14T06:52:06.696Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="js代码调试小技巧">
 <meta name="twitter:description" content="1. debugger;除了console.log之外，还有debugger调试;一旦在代码中加入了这行语句，Chrome在执行的时候会自动在该行停下来。你甚至可以和条件语句配合使用，仅仅在你需要它的时候开启。 if(thisThing){   debugger;} 2.console.table 将对象以表格的形式展示有时候，你需要查看一个复杂的对象元素。通常，我们都会使用console.log">
-<meta name="twitter:image" content="http://yoursite.com/2018/06/14/js代码测试小技巧/02.jpg">
+<meta name="twitter:image" content="https://github.com/zhangbaishun1996/baishun.github.io/blob/master/2018/06/14/js%E4%BB%A3%E7%A0%81%E6%B5%8B%E8%AF%95%E5%B0%8F%E6%8A%80%E5%B7%A7/02.jpg">
 
 
 
@@ -393,7 +393,7 @@
 <h2 id="2-console-table-将对象以表格的形式展示"><a href="#2-console-table-将对象以表格的形式展示" class="headerlink" title="2.console.table 将对象以表格的形式展示"></a>2.console.table 将对象以表格的形式展示</h2><p>有时候，你需要查看一个复杂的对象元素。通常，我们都会使用console.log将其打印出来然后查看。其实，你还可以使用console.table，让对象更加美观地呈现出来。</p>
 <p>var animals = [</p>
 <p>   { animal: ‘Horse’, name: ‘Henry’, age: 43 },<br>   { animal: ‘Dog’, name: ‘Fred’, age: 13 },<br>   { animal: ‘Cat’, name: ‘Frodo’, age: 18 }<br>];</p>
-<p>console.table(animals);<br>输出样式：<br><img src="/2018/06/14/js代码测试小技巧/02.jpg" alt="图例"></p>
+<p>console.table(animals);<br>输出样式：<br><img src="https://github.com/zhangbaishun1996/baishun.github.io/blob/master/2018/06/14/js%E4%BB%A3%E7%A0%81%E6%B5%8B%E8%AF%95%E5%B0%8F%E6%8A%80%E5%B7%A7/02.jpg" alt="图例"></p>
 <h2 id="3-尝试适配各种机型屏幕大小"><a href="#3-尝试适配各种机型屏幕大小" class="headerlink" title="3. 尝试适配各种机型屏幕大小"></a>3. 尝试适配各种机型屏幕大小</h2><p>如果你拥有各种型号的手机那么测试会相对简单，但是现实可不会这样。其实，你可以直接在浏览器你们改变viewport的大小来查看效果。谷歌浏览器提供了非常强大的功能。在谷歌开发者面板，点击toogle device mode按钮，就可以选择不同的设备大小了。<br><img src="/2018/06/14/js代码测试小技巧/03.jpg" alt="图例"></p>
 <h2 id="4-如何快速找到对应的DOM元素"><a href="#4-如何快速找到对应的DOM元素" class="headerlink" title="4. 如何快速找到对应的DOM元素"></a>4. 如何快速找到对应的DOM元素</h2><p>构造一个DOM元素，然后在控制台(Console)下面使用。谷歌浏览器调试器(Chrome Inspector)保留了最后5个DOM元素的历史。最后一个标记为$0,倒数第二个$1, 以此类推。<br>如果你按照item-4，item-3，item-2，item-1，item-0的顺序点击这些元素，那么你可以在控制台下使用$x来访问它们。<br><img src="/2018/06/14/js代码测试小技巧/04.jpg" alt="图例"></p>
 <h2 id="5-使用console-time-和console-timeEnd-来记录时间"><a href="#5-使用console-time-和console-timeEnd-来记录时间" class="headerlink" title="5. 使用console.time()和console.timeEnd()来记录时间"></a>5. 使用console.time()和console.timeEnd()来记录时间</h2><p>了解代码的执行时间是非常有用的，特别是调试耗时的for循环。你可以通过定义不同的名字来设置多个timer。我们来演示一下如何操作：</p>
