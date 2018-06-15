@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="js," />
 
 
 
@@ -79,13 +79,21 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="BaiShun">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta name="description" content="1、js规定 每一个函数数据类型（普通函数，类）都有一个天生自带的属性：prototype（原型）并且这个属性是一个对象数据类型的值 浏览器会给prototype天生加一个constructor(构造函数)的属性，值是当前函数（类）本身 每一个对象类型(普通对象、实例、prototype。。。)也天生自带一个属性proto ，属性值是当前实例所属的原型（prototype）  2、js函数（函数的">
+<meta name="keywords" content="js">
+<meta property="og:type" content="article">
+<meta property="og:title" content="js面向对象">
+<meta property="og:url" content="http://yoursite.com/2018/06/15/js面向对象/index.html">
 <meta property="og:site_name" content="BaiShun">
+<meta property="og:description" content="1、js规定 每一个函数数据类型（普通函数，类）都有一个天生自带的属性：prototype（原型）并且这个属性是一个对象数据类型的值 浏览器会给prototype天生加一个constructor(构造函数)的属性，值是当前函数（类）本身 每一个对象类型(普通对象、实例、prototype。。。)也天生自带一个属性proto ，属性值是当前实例所属的原型（prototype）  2、js函数（函数的">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://yoursite.com/baishun.github.io/2018/06/15/js面向对象/object1.jpg">
+<meta property="og:image" content="http://yoursite.com/baishun.github.io/2018/06/15/js面向对象/object.png">
+<meta property="og:updated_time" content="2018-06-15T03:48:29.253Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="BaiShun">
+<meta name="twitter:title" content="js面向对象">
+<meta name="twitter:description" content="1、js规定 每一个函数数据类型（普通函数，类）都有一个天生自带的属性：prototype（原型）并且这个属性是一个对象数据类型的值 浏览器会给prototype天生加一个constructor(构造函数)的属性，值是当前函数（类）本身 每一个对象类型(普通对象、实例、prototype。。。)也天生自带一个属性proto ，属性值是当前实例所属的原型（prototype）  2、js函数（函数的">
+<meta name="twitter:image" content="http://yoursite.com/baishun.github.io/2018/06/15/js面向对象/object1.jpg">
 
 
 
@@ -115,7 +123,7 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/06/15/js面向对象/"/>
 
 
 
@@ -129,7 +137,7 @@
   daovoice('update');
   </script>
 
-  <title>BaiShun</title>
+  <title>js面向对象 | BaiShun</title>
   
 
 
@@ -148,8 +156,7 @@
     
   
 
-  <div class="container sidebar-position-right 
-  page-home">
+  <div class="container sidebar-position-right page-post-detail">
     <div class="headband"></div>
       <a href="https://github.com/zhangbaishun1996"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_gray_6d6d6d.png" alt="Fork me on GitHub"></a>
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -242,9 +249,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -274,9 +281,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/baishun.github.io/2018/06/15/js面向对象/" itemprop="url">js面向对象</a></h1>
+          <h1 class="post-title" itemprop="name headline">js面向对象</h1>
         
 
         <div class="post-meta">
@@ -330,6 +335,11 @@
           
 
           
+            <span class="post-meta-divider">|</span>
+            <span class="page-pv"><i class="fa fa-file-o"></i> 浏览
+            <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>次
+            </span>
+          
 
           
             <div class="post-wordcount">
@@ -367,21 +377,18 @@
       
 
       
-        
-          
-          1、js规定
-每一个函数数据类型（普通函数，类）都有一个天生自带的属性：prototype（原型）并且这个属性是一个对象数据类型的值
-浏览器会给prototype天生加一个constructor(构造函数)的属性，值是当前函数（类）本身
-每一个对象类型(普通对象、实例、prototype。。。)也天
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/baishun.github.io/2018/06/15/js面向对象/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
+        <h3 id="1、js规定"><a href="#1、js规定" class="headerlink" title="1、js规定"></a>1、js规定</h3><ol>
+<li>每一个函数数据类型（普通函数，类）都有一个天生自带的属性：prototype（原型）并且这个属性是一个对象数据类型的值</li>
+<li>浏览器会给prototype天生加一个constructor(构造函数)的属性，值是当前函数（类）本身</li>
+<li>每一个对象类型(普通对象、实例、prototype。。。)也天生自带一个属性<em>proto</em> ，属性值是当前实例所属的原型（prototype）<br><img src="/baishun.github.io/2018/06/15/js面向对象/object1.jpg" alt="面向对象进阶"></li>
+</ol>
+<h3 id="2、js函数（函数的多面性）"><a href="#2、js函数（函数的多面性）" class="headerlink" title="2、js函数（函数的多面性）"></a>2、js函数（函数的多面性）</h3><ol>
+<li>普通的函数 fn</li>
+<li>‘类’ Fn</li>
+<li>‘普通对象’ var obj = {}</li>
+</ol>
+<p><img src="/baishun.github.io/2018/06/15/js面向对象/object.png" alt="面向对象进阶"></p>
+
       
     </div>
     
@@ -391,6 +398,12 @@
     
 	<div>
   
+    ﻿<div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">-------------本文结束<i class="fa fa-paw"></i>感谢您的阅读-------------</div>
+    
+</div>
+  
 </div>
     
 
@@ -398,334 +411,36 @@
 
     <footer class="post-footer">
       
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/baishun.github.io/2018/06/14/js调试技巧/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="John Doe">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/baishun.github.io/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="BaiShun">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/baishun.github.io/2018/06/14/js调试技巧/" itemprop="url">js调试技巧</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-06-14T10:53:20+08:00">
-                2018-06-14
-              </time>
-            
-
-            
-
-            
-          </span>
-
+        <div class="post-tags">
           
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/baishun.github.io/categories/js/" itemprop="url" rel="index">
-                    <span itemprop="name">js</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
+            <a href="/baishun.github.io/tags/js/" rel="tag"><i class="fa fa-tag"></i> js</a>
           
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数统计&#58;</span>
-                
-                <span title="字数统计">
-                  1,985
-                </span>
-              
-
-              
-
-              
-            </div>
-          
-
-          
-
         </div>
-      </header>
-    
+      
 
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
+      
       
       
 
       
-        
-          
-          1. debugger;除了console.log之外，还有debugger调试;一旦在代码中加入了这行语句，Chrome在执行的时候会自动在该行停下来。你甚至可以和条件语句配合使用，仅仅在你需要它的时候开启。
-if(thisThing){
-  debugger;}
-2.console.table 
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/baishun.github.io/2018/06/14/js调试技巧/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/baishun.github.io/2018/06/14/js调试技巧/" rel="next" title="js调试技巧">
+                <i class="fa fa-chevron-left"></i> js调试技巧
+              </a>
+            
           </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
 
-    
-	<div>
-  
-</div>
-    
+          <span class="post-nav-divider"></span>
 
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/baishun.github.io/2018/06/12/愉快的一天/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="John Doe">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/baishun.github.io/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="BaiShun">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/baishun.github.io/2018/06/12/愉快的一天/" itemprop="url">愉快的一天</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
+          <div class="post-nav-prev post-nav-item">
             
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-06-12T18:08:20+08:00">
-                2018-06-12
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数统计&#58;</span>
-                
-                <span title="字数统计">
-                  32
-                </span>
-              
-
-              
-
-              
-            </div>
-          
-
-          
-
+          </div>
         </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
       
 
       
-        
-          
-          我的第一个hexo博客经历了连天的不懈努力今天终于看到了自己博客的雏形
-
-          
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/baishun.github.io/2018/06/12/愉快的一天/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-	<div>
-  
-</div>
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </div>
@@ -735,10 +450,49 @@ if(thisThing){
   </article>
 
 
-    
-  </section>
+<div class="post-spread">
+      
+        
+  <div class="bdsharebuttonbox">
+    <a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+    <a href="#" class="bds_douban" data-cmd="douban" title="分享到豆瓣网"></a>
+    <a href="#" class="bds_sqq" data-cmd="sqq" title="分享到QQ好友"></a>
+    <a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a>
+    <a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+    <a href="#" class="bds_tieba" data-cmd="tieba" title="分享到百度贴吧"></a>
+    <a href="#" class="bds_twi" data-cmd="twi" title="分享到Twitter"></a>
+    <a href="#" class="bds_fbook" data-cmd="fbook" title="分享到Facebook"></a>
+    <a href="#" class="bds_more" data-cmd="more"></a>
+    <a class="bds_count" data-cmd="count"></a>
+  </div>
+  <script>
+    window._bd_share_config = {
+      "common": {
+        "bdText": "",
+        "bdMini": "2",
+        "bdMiniList": false,
+        "bdPic": ""
+      },
+      "share": {
+        "bdSize": "16",
+        "bdStyle": "0"
+      },
+      "image": {
+        "viewList": ["tsina", "douban", "sqq", "qzone", "weixin", "twi", "fbook"],
+        "viewText": "分享到：",
+        "viewSize": "16"
+      }
+    }
+  </script>
 
-  
+<script>
+  with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='//bdimg.share.baidu.com/static/api/js/share.js?cdnversion='+~(-new Date()/36e5)];
+</script>
+
+      
+    </div>
+
+  </div>
 
 
           </div>
@@ -746,6 +500,15 @@ if(thisThing){
 
 
           
+
+  
+    <div class="comments" id="comments">
+      <div id="lv-container" data-id="city" data-uid="MTAyMC8zNzMwNy8xMzg0MQ"></div>
+    </div>
+
+  
+
+
 
         </div>
         
@@ -766,8 +529,17 @@ if(thisThing){
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -831,6 +603,22 @@ if(thisThing){
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#1、js规定"><span class="nav-number">1.</span> <span class="nav-text">1、js规定</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2、js函数（函数的多面性）"><span class="nav-number">2.</span> <span class="nav-text">2、js函数（函数的多面性）</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -1009,6 +797,10 @@ if(thisThing){
 
 
   
+  <script type="text/javascript" src="/baishun.github.io/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/baishun.github.io/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
@@ -1037,6 +829,17 @@ if(thisThing){
 
 
 
+  
+    <script type="text/javascript">
+      (function(d, s) {
+        var j, e = d.getElementsByTagName(s)[0];
+        if (typeof LivereTower === 'function') { return; }
+        j = d.createElement(s);
+        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+        j.async = true;
+        e.parentNode.insertBefore(j, e);
+      })(document, 'script');
+    </script>
   
 
 
