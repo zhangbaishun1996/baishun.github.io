@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="BaiShun">
 <meta property="og:description" content="1、reduce里回调函数的四个参数  prev 上一个、next下一个、index索引、item原数组 函数返回叠加后的结果，不影响原数组   2、reduce求和 let arr = [1,2,3,4,5,6,7]let sum = arr.reduce(function(prev,next,index,item){&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp;console.log(ar">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-06-22T10:20:27.067Z">
+<meta property="og:updated_time" content="2018-06-22T10:24:18.321Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="reduce函数">
 <meta name="twitter:description" content="1、reduce里回调函数的四个参数  prev 上一个、next下一个、index索引、item原数组 函数返回叠加后的结果，不影响原数组   2、reduce求和 let arr = [1,2,3,4,5,6,7]let sum = arr.reduce(function(prev,next,index,item){&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp;console.log(ar">
@@ -349,7 +349,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  182
+                  179
                 </span>
               
 
@@ -384,7 +384,7 @@
 <p>let arr = [1,2,3,4,5,6,7]<br>let sum = arr.reduce(function(prev,next,index,item){<br>&nbsp; &nbsp;&nbsp;&nbsp;console.log(arguments)<br>&nbsp;&nbsp;&nbsp;&nbsp;//return 100; //本次的返回值会作为下一次的上一次返回结果<br>&nbsp;&nbsp;&nbsp;&nbsp;//reduce求和<br>&nbsp;&nbsp;&nbsp;&nbsp;return prev+next;<br>&nbsp;&nbsp;})</p>
 </blockquote>
 <h3 id="3、reduce求乘积"><a href="#3、reduce求乘积" class="headerlink" title="3、reduce求乘积"></a>3、reduce求乘积</h3><blockquote>
-<p>let sum2 = [{“price”:40,”count”:2},{“price”:40,”count”:{“price”:40,”count”:4}]<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sum2.reduce(function(prev,next,index,item){<br>                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return prev+next.price*next.count<br>            &nbsp;&nbsp;&nbsp;},0) //0默认指定第一次的prev<br>            console.log(sum2)</p>
+<p>let sum2 = [{“price”:40,”count”:2},{“price”:40,”count”:4}]<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sum2.reduce(function(prev,next,index,item){<br>                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return prev+next.price*next.count<br>            &nbsp;&nbsp;&nbsp;},0) //0默认指定第一次的prev<br>            console.log(sum2)</p>
 </blockquote>
 <h3 id="4、reduce多维数组转一维数组"><a href="#4、reduce多维数组转一维数组" class="headerlink" title="4、reduce多维数组转一维数组"></a>4、reduce多维数组转一维数组</h3><blockquote>
 <p>let sum3= [[1,2,3],[4,5,6],[7,8,9]].reduce(function(prev,next,index,item){<br>    &nbsp;&nbsp;&nbsp;&nbsp;return prev.concat(next) //concat 数组拼接<br>    &nbsp;&nbsp;})<br>console.log(sum3)</p>
